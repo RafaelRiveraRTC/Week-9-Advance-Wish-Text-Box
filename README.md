@@ -1,1 +1,47 @@
 # Week 9 Advance Wish Text Box
+
+
+
+
+Rewatch the leacture and take better notes
+
+
+<Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Title RichTextBox -->
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Content="Title:"/>
+        <RichTextBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" x:Name="TitleRichTextBox" Height="50"/>
+
+        <!-- Paragraph RichTextBox -->
+        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Content="Paragraph:"/>
+        <RichTextBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" x:Name="ParagraphRichTextBox" Height="100"/>
+        <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Horizontal">
+            <Label Content="Font Size:"/>
+            <ComboBox x:Name="FontSizeComboBox" Width="100">
+                <ComboBoxItem Content="10" IsSelected="True"/>
+                <ComboBoxItem Content="12"/>
+                <ComboBoxItem Content="14"/>
+                <ComboBoxItem Content="16"/>
+                <ComboBoxItem Content="18"/>
+                <ComboBoxItem Content="20"/>
+            </ComboBox>
+        </StackPanel>
+
+        <!-- Display RichTextBox -->
+        <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Content="Display:"/>
+        <RichTextBox Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" x:Name="DisplayRichTextBox" Height="150"/>
+
+        <!-- Add Button -->
+        <Button Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="3" Content="Add to Display" Click="AddToDisplayButton_Click"/>
+    </Grid>
